@@ -52,13 +52,13 @@ public class CustomList extends ArrayAdapter<City> {
     public void addCity(City city) {
         cities.add(city);
     }
-    public static boolean hasCity(City city) {
+    public boolean hasCity(City city) {
         return cities.contains(city);
     }
 
-    public static void deleteCity(City city) {
+    public void deleteCity(City city) {
         boolean condition;
-        condition = CustomList.hasCity(city);
+        condition = hasCity(city);
         if (condition) {
             cities.remove(city);
         }
