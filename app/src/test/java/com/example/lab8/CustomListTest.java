@@ -20,6 +20,9 @@ public class CustomListTest {
         return list;
 
     }
+    public City MockCity() {
+        return new City("Estevan", "SK");
+    }
     @Test
     public void addCityTest() {
         list = MockCityList();
@@ -42,11 +45,10 @@ public class CustomListTest {
     @Test
     public void deleteCityTest() {
         list = MockCityList();
-        int listSize = list.getCount();
-        list.addCity(new City("Estevan", "SK"));
-        assertEquals(list.getCount(), listSize + 1);
-        list.deleteCity(new City("Estevan", "SK"));
-        assertEquals(list.getCount(), listSize);
+        list.addCity(MockCity());
+        assertEquals(list.getCount(), 1);
+        list.deleteCity(MockCity());
+        assertEquals(list.getCount(), 0);
     }
 
 
