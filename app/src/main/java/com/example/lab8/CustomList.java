@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class CustomList extends ArrayAdapter<City> {
 
-    private static ArrayList<City> cities;
+    private ArrayList<City> cities;
     private Context context;
 
     public CustomList(Context context, ArrayList<City> cities) {
