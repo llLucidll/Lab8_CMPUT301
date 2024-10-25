@@ -40,5 +40,12 @@ public class CustomListTest {
         list = MockCityList();
         assertFalse(CustomList.hasCity(new City("Estevan", "SK")));
     }
+    @Test
+    public void deleteCityTest() {
+        list = MockCityList();
+        list.addCity(new City("Estevan", "SK"));
+        CustomList.deleteCity(new City("Estevan", "SK"));
+        assertEquals(list.getCount(), 0);
+    }
 
 }
