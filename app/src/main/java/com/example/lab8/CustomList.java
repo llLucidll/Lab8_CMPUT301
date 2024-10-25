@@ -57,12 +57,10 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public static void deleteCity(City city) {
-        /*
         boolean condition;
         condition = CustomList.hasCity(city);
         if (condition) {
             cities.remove(city);
         }
-         */
     }
 }

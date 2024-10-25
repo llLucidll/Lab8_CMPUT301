@@ -20,7 +20,6 @@ public class CustomListTest {
         return list;
 
     }
-
     @Test
     public void addCityTest() {
         list = MockCityList();
